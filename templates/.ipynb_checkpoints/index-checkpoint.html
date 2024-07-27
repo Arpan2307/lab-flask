@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GMAP Screenshot Web App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>WELCOME TO GMAP SCREENSHOT WEB APP</h1>
+    <a href="{{ url_for('upload_file') }}">
+        <button style="background:#ffde59;color:black;">Click To Continue</button>
+    </a>
+    <img src="{{ url_for('static', filename='img/proj.png') }}" alt="Project Image">
+</body>
+</html>

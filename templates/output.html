@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Output</title>
+    <style>
+        /* Additional styles specific to this page if needed */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Output</h1>
+
+        <div class="output-section">
+            <h2>Fields</h2>
+            <div class="output">
+                <ul>
+                    <li><strong>Scale Length in pixels:</strong> {{ fields.max_length | round(2)}}</li>
+                    <li><strong>Meters per Pixel:</strong> {{ fields.meters_per_pixel| round(2) }}</li>
+                    <li><strong>Aerial Distance:</strong> {{ fields.ad | round(2)}}</li>
+                    <li><strong>Aerial Distance in Meters:</strong> {{ fields.ad_m| round(2) }}</li>
+                    <li><strong>Red Pixels:</strong> {{ fields.rp | round(2)}}</li>
+                    <li><strong>Yellow Pixels:</strong> {{ fields.yp| round(2) }}</li>
+                    <li><strong>Blue Pixels:</strong> {{ fields.bp| round(2) }}</li>
+                    <li><strong>Total:</strong> {{ fields.total| round(2) }}</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="output-section">
+            <h2>Predictions</h2>
+            <div class="output">
+                <ul>
+                    <li><strong>Original Distance in meters:</strong> {{ predictions.original_distance| round(2) }}</li>
+                    <li><strong>Estimated Time in minutes:</strong> {{ predictions.estimated_time | round(2)}}</li>
+                    <!-- Add more predictions as needed -->
+                </ul>
+            </div>
+        </div>
+
+        
+
+        <a href="{{ url_for('home') }}"><button>Back to Home</button></a>
+    </div>
+</body>
+</html>

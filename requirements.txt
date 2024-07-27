@@ -1,1 +1,8 @@
 Flask
+Werkzeug
+numpy
+opencv-python
+os-sys
+matplotlib
+easyocr
+regex
